@@ -71,10 +71,6 @@ namespace TestNameSpace
         {
             return _books.FindAll(i => i.Date.ToString("dd.MM.yyyy") == date);
         }
-        public List<Book> FindByDate(DateTime date)
-        {
-            return _books.FindAll(i => i.Date == date);
-        }
 
         public void Sort(Func<Book, IComparable> f)
         {

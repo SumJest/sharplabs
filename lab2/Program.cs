@@ -23,7 +23,7 @@ namespace LabNamespace
             return new string(_string);
         }
         public static implicit operator String(string str) => new String(str);
-        public static explicit operator string(String str) => str.ToString();
+        public static implicit operator string(String str) => str.ToString();
 
         public char this[int i]
         {
@@ -36,11 +36,6 @@ namespace LabNamespace
             return _string;
         }
 
-        public int Count()
-        {
-            return _string.Length;
-        }
-        
         public static String operator +(String a, object b)
         {
             return new String(a.ToCharArray().Concat(b.ToString().ToCharArray()).ToArray());
